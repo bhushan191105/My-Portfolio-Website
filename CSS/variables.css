@@ -1,0 +1,21 @@
+:root {
+    /*Theme Colors*/
+    --primary: #1a56db;
+
+    --primary-dark: #15409e;
+
+    --text: #1a1a1a;
+
+    --secondary: #333333;
+
+    --border: #e5e5e5;
+
+    --background: #fff;
+
+    --footer: #f2f2f2;
+
+    /*FONTS*/
+    --heading-font: Georgia, 'Times New Roman', serif;
+    --body-font: Georgia, 'Times New Roman', serif;
+    --nav-font: 'Helvetica Neue', Arial, sans-serif;
+}
