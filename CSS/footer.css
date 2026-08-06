@@ -1,0 +1,37 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 48px;
+
+    background-color: var(--footer);
+    color: var(--text);
+    font-family: var(--nav-font);
+    font-size: 0.85rem;
+
+    border-top: 1px solid var(--border);
+
+}
+
+.footer p {
+    font-style: italic;
+    color: var(--secondary);
+
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+}
+
+.footer-links a {
+    color: var(--text);
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
