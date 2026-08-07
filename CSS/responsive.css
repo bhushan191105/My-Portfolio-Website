@@ -1,0 +1,64 @@
+/* Responsive for mobile devices */
+
+@media (max-width:768px) {
+
+    /* responsive Navbar */
+    .nav-links,
+    .resume-btn {
+        display: none;
+    }
+
+    .menu-checkbox:checked~.nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        padding: 24px 48px;
+        background-color: var(--background);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .menu-checkbox:checked~.resume-btn {
+        display: block;
+        position: absolute;
+        top: 75px;
+        left: 250px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Responsive Hero Section */
+    .hero {
+        padding: 80px 24px 100px;
+
+    }
+
+    .hero-heading {
+        font-size: 2.1rem;
+    }
+
+
+    /* Responsive Footer section */
+    .footer {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    /* For adding responsiveness of other sections in future */
+
+}
+
+/* ====================
+    Reduce Motion 
+==================== */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
