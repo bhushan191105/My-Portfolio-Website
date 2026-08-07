@@ -1,0 +1,54 @@
+/* Hero Section */
+.hero {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 120px 24px 160px;
+
+}
+
+/* Eyebrow text */
+
+.eyebrow {
+    font-family: var(--nav-font);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+/* Hero Heading */
+
+.hero-heading {
+    font-family: var(--heading-font);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--text);
+    margin-bottom: 28px;
+
+}
+
+/* Hero Description */
+
+.hero-text {
+    font-family: var(--body-font);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--secondary);
+
+}
+
+/*  Hero Links (skills) */
+.hero-text a {
+    color: var(--primary);
+    border-bottom: 1px solid rgba(26, 86, 219, 0.3);
+
+    transition:
+        border-bottom-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.hero-text a:hover {
+    border-bottom-color: var(--primary);
+}
