@@ -58,7 +58,6 @@
     .education-intro {
         flex-direction: column;
         gap: 32px;
-
     }
 
     .education-intro-text,
@@ -67,9 +66,14 @@
         width: 100%;
     }
 
+    .education-intro-text .section-title {
+        font-size: 2.6rem;
+    }
+
     .degree-cards,
     .cert-cards {
         flex-direction: column;
+        gap: 20px;
     }
 
     .degree-card,
