@@ -49,6 +49,34 @@
         text-align: center;
     }
 
+
+    /* Responsive Education Section */
+    .education {
+        padding: 60px 24px;
+    }
+
+    .education-intro {
+        flex-direction: column;
+        gap: 32px;
+
+    }
+
+    .education-intro-text,
+    .knowledge-card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .degree-cards,
+    .cert-cards {
+        flex-direction: column;
+    }
+
+    .degree-card,
+    .cert-card {
+        width: 100%;
+    }
+
     /* For adding responsiveness of other sections in future */
 
 }
