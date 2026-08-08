@@ -1,0 +1,201 @@
+.education {
+    padding: 80px 8%;
+    background-color: var(--background);
+}
+
+/* Education Intro */
+.education-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 40px;
+    margin-bottom: 60px;
+
+}
+
+.education-intro-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.education-intro-text .section-title {
+    color: var(--primary);
+}
+
+.education-intro-text .section-subtitle {
+    color: var(--secondary);
+    margin-top: 16px;
+    line-height: 1.6;
+
+}
+
+/* Technical knowledge card */
+
+.knowledge-card {
+    flex: 1;
+    max-width: 460px;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px 32px;
+}
+
+.knowledge-card-title {
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--text);
+    margin-bottom: 20px;
+
+}
+
+.knowledge-group {
+    margin-bottom: 18px;
+}
+
+.knowledge-group:last-child {
+    margin-bottom: 0;
+}
+
+.knowledge-label {
+    display: block;
+    font-family: var(--nav-font);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.knowledge-items {
+    font-family: var(--body-font);
+    color: var(--secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+
+}
+
+/* Education block */
+
+.education-block {
+    margin-bottom: 50px;
+
+}
+
+.block-heading {
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 12px;
+
+}
+
+.block-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin-bottom: 28px;
+
+}
+
+/* Degree Cards */
+
+.degree-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.degree-card {
+    flex: 1 1 320px;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.degree-tag {
+    display: block;
+    font-family: var(--nav-font);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.degree-title {
+    font-family: var(--heading-font);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.degree-institution {
+    font-family: var(--body-font);
+    color: var(--secondary);
+    margin-bottom: 18px;
+}
+
+.degree-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-family: var(--nav-font);
+    font-size: 0.9rem;
+    color: var(--secondary);
+
+}
+
+.meta-badge {
+    background-color: var(--footer);
+
+    color: var(--secondary);
+
+    padding: 4px 10px;
+
+    border-radius: 999px;
+
+    font-weight: 600;
+
+    font-size: 0.85rem;
+}
+
+/*  Certification cards */
+
+.cert-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.cert-card {
+    flex: 1 1 300px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.cert-title {
+    font-family: var(--heading-font);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2px;
+}
+
+.cert-subtitle {
+    font-family: var(--body-font);
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
