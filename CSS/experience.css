@@ -1,0 +1,365 @@
+.experience-section {
+    padding: 80px 8%;
+    background-color: var(--background);
+}
+
+/* Section Header */
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-header .section-title {
+    font-family: var(--heading-font);
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--text);
+    margin-bottom: 16px;
+}
+
+.section-header .section-subtitle {
+    color: var(--secondary);
+    font-family: var(--body-font);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 650px;
+}
+
+/* Content Layout */
+.experience-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* Main Card (Left side) */
+.experience-main {
+    flex: 2;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.experience-main:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+    border-color: rgba(26, 86, 219, 0.2);
+}
+
+.experience-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.experience-label {
+    display: inline-block;
+    font-family: var(--nav-font);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.experience-title {
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.experience-company {
+    font-family: var(--body-font);
+    font-size: 1.05rem;
+    color: var(--secondary);
+}
+
+.experience-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.experience-date {
+    font-family: var(--nav-font);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.experience-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--nav-font);
+    font-size: 0.75rem;
+    font-weight: 700;
+    background-color: rgba(26, 86, 219, 0.08);
+    color: var(--primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(26, 86, 219, 0.1);
+}
+
+.experience-badge i {
+    font-size: 0.75rem;
+}
+
+.experience-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 28px 0;
+}
+
+.experience-description {
+    font-family: var(--body-font);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--secondary);
+    margin-bottom: 28px;
+}
+
+/* Flagship Project Box */
+.project-box {
+    background-color: rgba(26, 86, 219, 0.02);
+    border: 1px solid rgba(26, 86, 219, 0.1);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 28px;
+}
+
+.project-title {
+    font-family: var(--heading-font);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-title i {
+    color: var(--primary);
+    font-size: 1.15rem;
+}
+
+.project-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.project-list li {
+    font-family: var(--body-font);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--secondary);
+    padding-left: 28px;
+    position: relative;
+}
+
+.project-list li strong {
+    color: var(--text);
+}
+
+.project-list .check-icon {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: var(--primary);
+    font-size: 1.05rem;
+    line-height: 1;
+}
+
+/* Github Link Card */
+.project-link-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.github-project-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.github-icon {
+    font-size: 2.2rem;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.github-project-title {
+    font-family: var(--heading-font);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.github-project-description {
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+    color: var(--secondary);
+    line-height: 1.4;
+}
+
+.github-project-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--nav-font);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background-color: var(--text);
+    color: var(--background);
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid var(--text);
+    transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.github-project-btn:hover {
+    background-color: transparent;
+    color: var(--text);
+    border-color: var(--text);
+}
+
+.github-project-btn i {
+    font-size: 0.85rem;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.github-project-btn:hover i {
+    transform: translate(2px, -2px);
+}
+
+/* Sidebar (Right side) */
+.experience-sidebar {
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.sidebar-card,
+.outcomes-card {
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
+}
+
+.sidebar-title {
+    font-family: var(--heading-font);
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--text);
+    margin-bottom: 16px;
+}
+
+.sidebar-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin-bottom: 20px;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.tech-item:last-child {
+    margin-bottom: 0;
+}
+
+.tech-icon {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(26, 86, 219, 0.05);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tech-item:hover .tech-icon {
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+.tech-name {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text);
+    margin-bottom: 2px;
+}
+
+.tech-desc {
+    font-family: var(--body-font);
+    font-size: 0.85rem;
+    color: var(--secondary);
+}
+
+/* Key Outcomes */
+.outcomes-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.outcomes-list li {
+    font-family: var(--body-font);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--secondary);
+    padding-left: 28px;
+    position: relative;
+}
+
+.outcomes-list .check-icon {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--primary);
+    font-size: 1rem;
+    line-height: 1;
+}
