@@ -37,6 +37,18 @@
 
     }
 
+    .hero-container {
+        flex-direction: column-reverse;
+        /* Places picture on top on mobile, text below */
+        gap: 32px;
+        text-align: center;
+    }
+
+    .hero-image-circle {
+        width: 200px;
+        height: 200px;
+    }
+
     .hero-heading {
         font-size: 2.1rem;
     }
