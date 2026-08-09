@@ -603,6 +603,91 @@
     </div>
   </section>
 
+  <!-- ===== CONTACT FORM ===== -->
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="contact-section">
+    <div class="section-header">
+      <h2 class="section-title">Let's open a dialogue.</h2>
+      <p class="section-subtitle">
+        Whether you're looking to collaborate on a complex engineering problem, discuss embedded systems
+        architecture, or simply connect, I'm readily available through the channels below. I am actively
+        open to internships, entry-level roles, and technical interviews—let's discuss how we can work together.
+      </p>
+    </div>
+
+    <div class="contact-container">
+      <!-- Left: Contact Details -->
+      <div class="contact-info">
+        <div class="contact-method">
+          <div class="contact-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="contact-details">
+            <span class="contact-label">ELECTRONIC MAIL</span>
+            <a href="mailto:bhushantodkar4567@gmail.com" class="contact-value">bhushantodkar4567@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-method">
+          <div class="contact-icon">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <div class="contact-details">
+            <span class="contact-label">PROFESSIONAL NETWORK</span>
+            <a href="https://linkedin.com/in/bhushan-s-todkar19" target="_blank"
+              class="contact-value">linkedin.com/in/bhushan-s-todkar19</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div class="contact-form-container">
+        <h3>Send a Message</h3>
+        <form class="contact-form" id="contactForm">
+          <!-- Web3Forms Access Key -->
+          <input type="hidden" name="access_key" value="24e31fd1-1f3f-4a1d-9625-e56a89c80735">
+
+          <!-- Optional Honeypot element for anti-spam filtering -->
+          <input type="checkbox" name="botcheck" class="hidden-honeypot" style="display: none;">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Jane" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane.doe@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Inquiry regarding..." required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="How can we collaborate?" required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span>Transmit Message</span> <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div id="formStatus" class="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <p>&copy; 2026 Bhushan Todkar. Engineered with precision.</p>
@@ -613,6 +698,62 @@
     </div>
   </footer>
 
+  <script>
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formStatus = document.getElementById('formStatus');
+
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Update button visual state
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<span>Sending...</span> <i class="fa-solid fa-spinner fa-spin"></i>`;
+      formStatus.className = 'form-status';
+      formStatus.textContent = '';
+
+      const formData = new FormData(contactForm);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
+      })
+        .then(async (response) => {
+          let result = await response.json();
+          if (response.status == 200) {
+            formStatus.textContent = "Thank you! Your message has been sent successfully.";
+            formStatus.className = 'form-status success';
+            contactForm.reset();
+          } else {
+            formStatus.textContent = result.message || "Something went wrong. Please try again.";
+            formStatus.className = 'form-status error';
+          }
+        })
+        .catch(error => {
+          formStatus.textContent = "Network error. Please try again later.";
+          formStatus.className = 'form-status error';
+        })
+        .then(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+          setTimeout(() => {
+            formStatus.style.opacity = '0';
+            setTimeout(() => {
+              formStatus.textContent = '';
+              formStatus.className = 'form-status';
+              formStatus.style.opacity = '1';
+            }, 300);
+          }, 5000);
+        });
+    });
+  </script>
 
 </body>
 
