@@ -122,6 +122,31 @@
         width: 100%;
         justify-content: center;
     }
+
+    /* Responsive Projects Section */
+    .projects-section {
+        padding: 60px 24px;
+    }
+
+    .projects-container {
+        gap: 60px;
+        margin-top: 40px;
+    }
+
+    .project-card {
+        flex-direction: column !important;
+        gap: 28px;
+    }
+
+    .project-image-container,
+    .project-content {
+        width: 100%;
+        flex: none;
+    }
+
+    .project-title {
+        font-size: 1.8rem;
+    }
 }
 
 /* ====================
