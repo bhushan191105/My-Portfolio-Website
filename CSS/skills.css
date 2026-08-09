@@ -1,0 +1,230 @@
+/* Skills Section Styling */
+.skills-section {
+    padding: 80px 8%;
+    background-color: var(--background);
+}
+
+.skills-section .section-header {
+    margin-bottom: 40px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+}
+
+/* Base Card Styling */
+.skills-card {
+    background-color: #f4f4f5; /* Light grey card background */
+    border-radius: 12px;
+    padding: 32px;
+    border: 1px solid #e4e4e7;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.skills-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
+    border-color: rgba(26, 86, 219, 0.15);
+}
+
+/* Card Row-specific spans */
+.core-languages-card {
+    grid-column: span 5;
+}
+
+.electronics-card {
+    grid-column: span 4;
+}
+
+.web-data-card {
+    grid-column: span 3;
+}
+
+.version-control-card {
+    grid-column: span 4;
+}
+
+.cs-fundamentals-card {
+    grid-column: span 8;
+}
+
+.natural-languages-card {
+    grid-column: span 12;
+}
+
+/* Card Header styles */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.card-header i {
+    font-size: 1.25rem;
+}
+
+.card-header h3 {
+    font-family: var(--nav-font);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+/* Icon Colors */
+.icon-blue {
+    color: var(--primary);
+}
+
+.icon-gold {
+    color: #a16207; /* Match eyebrow gold */
+}
+
+.icon-yellow {
+    color: #eab308; /* Amber yellow */
+}
+
+/* Skills Content: Badges/Tags (for Core Languages, Electronics, Version Control) */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.skill-tag {
+    font-family: var(--nav-font);
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: var(--background); /* White badge background */
+    color: var(--text);
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid #e4e4e7;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.skill-tag:hover {
+    background-color: #f4f4f5;
+    border-color: #d4d4d8;
+}
+
+/* Skills Content: List style (for Web & Data) */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skills-list li {
+    font-family: var(--body-font);
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.4;
+    transition: transform 0.2s ease;
+}
+
+.skills-list li:hover {
+    transform: translateX(4px);
+    color: var(--primary);
+}
+
+/* Skills Content: Card Description (for Version Control) */
+.card-desc {
+    font-family: var(--body-font);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--secondary);
+    margin: 0 0 20px 0;
+}
+
+/* CS Fundamentals Card (Dark Theme) */
+.cs-fundamentals-card.dark-card {
+    background-color: #1c1c1e; /* Premium dark background */
+    border-color: #2c2c2e;
+}
+
+.cs-fundamentals-card.dark-card:hover {
+    border-color: rgba(234, 179, 8, 0.3);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cs-fundamentals-card.dark-card .card-header h3 {
+    color: #ffffff;
+    font-family: var(--heading-font);
+    font-weight: 600;
+}
+
+.cs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 8px;
+}
+
+.cs-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cs-label {
+    font-family: var(--nav-font);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #eab308; /* Gold/yellow label */
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.cs-value {
+    font-family: var(--heading-font);
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #e5e5ea;
+    margin: 0;
+}
+
+/* Natural Languages Card (Horizontal Layout) */
+.natural-languages-card {
+    padding: 24px 32px;
+}
+
+.card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.natural-languages-card .card-header {
+    margin-bottom: 0;
+}
+
+.languages-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.languages-list span {
+    font-family: var(--body-font);
+    font-size: 0.95rem;
+    color: var(--secondary);
+}
+
+.languages-list .separator {
+    color: #d1d5db;
+    font-size: 0.75rem;
+}

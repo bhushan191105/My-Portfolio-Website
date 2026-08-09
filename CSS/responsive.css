@@ -147,6 +147,45 @@
     .project-title {
         font-size: 1.8rem;
     }
+
+    /* Responsive Skills Section */
+    .skills-section {
+        padding: 60px 24px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .core-languages-card,
+    .electronics-card,
+    .web-data-card,
+    .version-control-card,
+    .cs-fundamentals-card,
+    .natural-languages-card {
+        grid-column: 1 / -1;
+        padding: 24px;
+    }
+
+    .cs-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .natural-languages-card .card-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .languages-list {
+        flex-wrap: wrap;
+        gap: 8px 12px;
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: 4px;
+    }
 }
 
 /* ====================
