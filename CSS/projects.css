@@ -1,0 +1,186 @@
+/* Projects Section Styling */
+.projects-section {
+    padding: 80px 8%;
+    background-color: var(--background);
+}
+
+.projects-section .eyebrow {
+    color: #a16207; /* Premium Gold/Amber tone */
+    margin-bottom: 12px;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-top: 60px;
+}
+
+/* Individual Project Card */
+.project-card {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background-color: var(--background);
+    border-radius: 12px;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Alternate project card image and content alignment */
+.project-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Image Container & Styling */
+.project-image-container {
+    flex: 1.2;
+    position: relative;
+    background-color: #f3f4f6;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.project-image-container::before {
+    content: "PROJECT PREVIEW";
+    font-family: var(--nav-font);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #9ca3af;
+    letter-spacing: 0.1em;
+}
+
+.project-card.skeleton .project-image-container {
+    background-color: #fafafa;
+    border-style: dashed;
+}
+
+.project-card.skeleton .project-image-container::before {
+    content: "COMING SOON";
+}
+
+.project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Avoid displaying broken image icon when src is empty */
+.project-image[src=""], 
+.project-image:not([src]) {
+    display: none;
+}
+
+/* Image hover effect */
+.project-card:hover .project-image {
+    transform: scale(1.03);
+}
+
+/* Content Area */
+.project-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.project-tag {
+    font-family: var(--nav-font);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #a16207; /* Match the gold styling */
+    text-transform: uppercase;
+}
+
+.project-title {
+    font-family: var(--heading-font);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.15;
+    margin: 0;
+}
+
+.project-text {
+    font-family: var(--body-font);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--secondary);
+    margin: 0;
+}
+
+/* Tech Stack Container */
+.project-tech {
+    margin-top: 4px;
+}
+
+.tech-label {
+    font-family: var(--nav-font);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    font-family: var(--nav-font);
+    font-size: 0.8rem;
+    font-weight: 500;
+    background-color: #f4f4f5;
+    color: #4b5563;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid #e5e7eb;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.tech-tag:hover {
+    background-color: #e4e4e7;
+    border-color: #d4d4d8;
+}
+
+/* Call to Action Link */
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--nav-font);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    margin-top: 8px;
+    transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    width: max-content;
+}
+
+.project-link i {
+    font-size: 0.85rem;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-link:hover {
+    color: var(--primary-dark);
+}
+
+.project-link:hover i {
+    transform: translateX(4px);
+}
