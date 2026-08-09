@@ -81,8 +81,47 @@
         width: 100%;
     }
 
-    /* For adding responsiveness of other sections in future */
+    /* Responsive Experience Section */
+    .experience-section {
+        padding: 60px 24px;
+    }
 
+    .section-header .section-title {
+        font-size: 2.6rem;
+    }
+
+    .experience-content {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .experience-main,
+    .experience-sidebar {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .experience-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .experience-meta {
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .project-link-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .github-project-btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 /* ====================
