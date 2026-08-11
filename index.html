@@ -690,6 +690,10 @@
             <textarea id="message" name="message" placeholder="How can we collaborate?" required></textarea>
           </div>
 
+          <div class="form-group captcha-group">
+            <div class="h-captcha" data-captcha="true" data-theme="light"></div>
+          </div>
+
           <div class="form-actions">
             <button type="submit" class="submit-btn" id="submitBtn">
               <span>Transmit Message</span> <i class="fa-solid fa-arrow-right"></i>
@@ -712,6 +716,7 @@
     </div>
   </footer>
 
+  <script src="https://web3forms.com/client/script.js" async defer></script>
   <script>
     const contactForm = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
@@ -728,6 +733,14 @@
       formStatus.textContent = '';
 
       const formData = new FormData(contactForm);
+      const hCaptchaToken = formData.get('h-captcha-response');
+      if (!hCaptchaToken) {
+        formStatus.textContent = "Please complete the CAPTCHA check.";
+        formStatus.className = 'form-status error';
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+        return;
+      }
       const object = Object.fromEntries(formData);
       const json = JSON.stringify(object);
 
