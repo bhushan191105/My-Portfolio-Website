@@ -240,3 +240,18 @@
     border: 1px solid #fecaca;
     color: #991b1b;
 }
+
+/* Captcha alignment and responsive adjustments */
+.captcha-group {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 8px;
+}
+
+@media (max-width: 480px) {
+    .captcha-group {
+        justify-content: center;
+        transform: scale(0.9);
+        transform-origin: center;
+    }
+}
